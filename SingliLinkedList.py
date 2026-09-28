@@ -60,6 +60,10 @@ class LinkedList:
                 current.data=data
                 break
             current=current.next
+    def delete_end(self):
+        current=self.head
+        while current.next is not None:
+            
 ll=LinkedList()
 ll.append(18)
 ll.append(45)
