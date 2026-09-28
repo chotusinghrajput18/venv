@@ -5,9 +5,9 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head=None
+
     def append(self,data):
         new_node=Node(data)
-        self.head
         if self.head is None:
             self.head=new_node
             return
@@ -16,10 +16,12 @@ class LinkedList:
             current=current.next
 
         current.next=new_node
+
     def append_beg(self,data):
         new_node=Node(data)
         new_node.next=self.head
         self.head=new_node
+
     def append_after_value(self,data,target):
         new_node=Node(data)
         current=self.head
@@ -30,6 +32,7 @@ class LinkedList:
                 return
             current=current.next
         print(f"{target} not found")
+
     def search(self,data):
         current=self.head
         while current is not None:
@@ -37,16 +40,19 @@ class LinkedList:
                 return True
             current=current.next
         return False
+    
     def display(self):
         current=self.head
         while current is not None:
             print(current.data)
             current=current.next
         print(current)
+
     def delete_beg(self):
         if self.head is None:
             print("empty list")
         self.head=self.head.next
+
     def update(self,value,data):
         current=self.head
         while current is not None:
