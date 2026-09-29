@@ -61,8 +61,14 @@ class LinkedList:
                 break
             current=current.next
     def delete_end(self):
+        if self.head is None:
+            return "List is Empty"
+        if self.head.next is None:
+            self.head=None
         current=self.head
-        while current.next is not None:
+        while current.next.next is not None:
+            current=current.next
+        current=current.next
             
 ll=LinkedList()
 ll.append(18)
@@ -71,6 +77,9 @@ ll.append_beg(33)
 ll.append_beg(93)
 ll.append_after_value(7,18)
 ll.search(33)
-ll.delete_beg()
 ll.update(7,18)
+# ll.display()
+ll.delete_beg()
+ll.delete_end()
+
 ll.display()
