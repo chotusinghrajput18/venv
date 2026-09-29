@@ -69,7 +69,13 @@ class LinkedList:
         while current.next.next is not None:
             current=current.next
         current=current.next
-            
+    def delete_speci(self,value):
+        current=self.head
+        while current is not None:
+            if current.data==value:
+                current=current.next
+        else:
+            return f"{value} does not exist"            
 ll=LinkedList()
 ll.append(18)
 ll.append(45)
