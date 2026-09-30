@@ -84,7 +84,16 @@ class LinkedList:
                 return
             current=current.next
         else:
-            return f"{value} does not exist"            
+            return f"{value} does not exist"  
+    def delete_before_value(self,value):
+        current=self.head
+        while current is not None:
+            if current.next.data==value:
+                current=current.next
+                return
+            current=current.next
+        else:
+            return f"{value} does not exist"          
 ll=LinkedList()
 ll.append(18)
 ll.append(45)
