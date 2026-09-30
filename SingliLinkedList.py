@@ -75,6 +75,15 @@ class LinkedList:
             if current.data==value:
                 current=current.next
         else:
+            return f"{value} does not exist"
+    def delete_after_value(self,value):
+        current=self.head
+        while current is not None:
+            if current.data==value:
+                current=current.next
+                return
+            current=current.next
+        else:
             return f"{value} does not exist"            
 ll=LinkedList()
 ll.append(18)
