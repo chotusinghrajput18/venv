@@ -116,5 +116,5 @@ ll.update(7,18)
 # ll.display()
 ll.delete_beg()
 ll.delete_end()
-
 ll.display()
+ll.delete_speci(45)
