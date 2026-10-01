@@ -102,7 +102,9 @@ class LinkedList:
                 return
             current=current.next
         else:
-            return f"{value} does not exist"          
+            return f"{value} does not exist"    
+    def delete_all(self):
+        self.head=None
 ll=LinkedList()
 ll.append(18)
 ll.append(45)
