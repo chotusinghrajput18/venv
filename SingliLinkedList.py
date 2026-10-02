@@ -105,6 +105,19 @@ class LinkedList:
             return f"{value} does not exist"    
     def delete_all(self):
         self.head=None
+    def insert_two_values(self,val1,val2,target):
+        current=self.head
+        while current is not None:
+            if current.data==target:
+                new_node1=Node(val1)
+                new_node2=Node(val2)
+                new_node1.next=new_node2
+                new_node2.next=current.next
+                current.next=new_node1
+                return
+            current=current.next
+        else:
+            return f"{target} does not exist"
 ll=LinkedList()
 ll.append(18)
 ll.append(45)
