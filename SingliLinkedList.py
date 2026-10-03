@@ -118,6 +118,15 @@ class LinkedList:
             current=current.next
         else:
             return f"{target} does not exist"
+    def reverse(self):
+        prev=None
+        current=self.head
+        while current is not None:
+            next_node=current.next
+            current.next=prev
+            prev=current
+            current=next_node
+        self.head=prev
 ll=LinkedList()
 ll.append(18)
 ll.append(45)
