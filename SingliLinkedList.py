@@ -127,6 +127,20 @@ class LinkedList:
             prev=current
             current=next_node
         self.head=prev
+    def insert_at_position(self,data,position):
+        new_node=Node(data)
+        if position==0:
+            new_node.next=self.head
+            self.head=new_node
+            return
+        current=self.head
+        for i in range(position-1):
+            if current is None:
+                print("Position out of bounds")
+                return
+            current=current.next
+        new_node.next=current.next
+        current.next=new_node
 ll=LinkedList()
 ll.append(18)
 ll.append(45)
